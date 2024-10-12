@@ -79,7 +79,7 @@ async function main() {
                   <i class="ri-music-fill"></i>
                   <div class="song-info">
                   <p class="song-name">${song
-                    .replace("/audios", "")
+                    .replace("/audios/", "")
                     .replace(".mp3", "")
                     .replaceAll("-", " ")}</p>
                   <p class="artist-name">Faiz</p>
@@ -168,7 +168,7 @@ async function main() {
     let index = songs.indexOf(currentSong.src);
 
     if ((index - 1) >= 0) {
-      playMusic(songs[index - 1].replace('/audios', '').replace('.mp3', ''));
+      playMusic(songs[index - 1].replace('/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
@@ -184,7 +184,7 @@ async function main() {
 
     let index = songs.indexOf(currentSong.src);
     if ((index + 1) < songs.length) {
-      playMusic(songs[index + 1].replace('/audios', '').replace('.mp3', ''));
+      playMusic(songs[index + 1].replace('/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
