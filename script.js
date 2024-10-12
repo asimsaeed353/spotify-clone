@@ -166,6 +166,7 @@ async function main() {
 
     console.log('Previous is clicked.');
     let index = songs.indexOf(currentSong.src);
+    console.log('Previous is clicked so here is the index of song', index);
 
     if ((index - 1) >= 0) {
       playMusic(songs[index - 1].replace('/audios/', '').replace('.mp3', ''));
@@ -183,6 +184,7 @@ async function main() {
     console.log('next is clicked.');
 
     let index = songs.indexOf(currentSong.src);
+    console.log('Next is clicked so here is the index of song', index);
     if ((index + 1) < songs.length) {
       playMusic(songs[index + 1].replace('/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
