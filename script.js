@@ -1,23 +1,38 @@
 console.log("Hello, this is javaScript");
 let currentSong = new Audio();
-let songs;
+const songs = [
+  '/audios/aj-bazar-mein-pabajulaan.mp3',
+  '/audios/aj-dil-k-qareen.mp3',
+  '/audios/ap-ki-yad-aati-rahi.mp3',
+  '/audios/aye-khuch-abrr.mp3',
+  '/audios/dard-itna-tha.mp3',
+  '/audios/dasht-e-tanhai-mein.mp3',
+  '/audios/gar-mujhey-iska-yaqeen.mp3',
+  '/audios/garmi-e-shoq-e-nazara.mp3',
+  '/audios/gulon-mein-rang-bhary.mp3',
+  '/audios/hijr-ki-raakh.mp3',
+  '/audios/hum-jo-tareek-raahon-mein.mp3',
+  '/audios/hum-ne-wo-sab.mp3',
+  '/audios/hum-par-tumhari-chah-ka.mp3',
+  '/audios/tum-aye-ho-na-shab-e-intazar.mp3'
+];
 
-async function getSongs() {
-  let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios");
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
+// async function getSongs() {
+//   let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios");
+//   let response = await a.text();
+//   let div = document.createElement("div");
+//   div.innerHTML = response;
+//   let as = div.getElementsByTagName("a");
 
-  let songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href);
-    }
-  }
-  return songs;
-}
+//   let songs = [];
+//   for (let index = 0; index < as.length; index++) {
+//     const element = as[index];
+//     if (element.href.endsWith(".mp3")) {
+//       songs.push(element.href);
+//     }
+//   }
+//   return songs;
+// }
 
 function playMusic(track) {
   currentSong.src = './audios/' + track + '.mp3';
@@ -31,8 +46,8 @@ function playMusic(track) {
 }
 
 async function main() {
-  // Get the list of the songs
-  songs = await getSongs();
+  // // Get the list of the songs
+  // songs = await getSongs();
   // playMusic(songs[0]);
 
   function formatTime(seconds) {
@@ -64,7 +79,7 @@ async function main() {
                   <i class="ri-music-fill"></i>
                   <div class="song-info">
                   <p class="song-name">${song
-                    .replace("https://github.com/asimsaeed353/spotify-clone/tree/main/audios", "")
+                    .replace("/audios", "")
                     .replace(".mp3", "")
                     .replaceAll("-", " ")}</p>
                   <p class="artist-name">Faiz</p>
@@ -153,7 +168,7 @@ async function main() {
     let index = songs.indexOf(currentSong.src);
 
     if ((index - 1) >= 0) {
-      playMusic(songs[index - 1].replace('https://github.com/asimsaeed353/spotify-clone/tree/main/audios', '').replace('.mp3', ''));
+      playMusic(songs[index - 1].replace('/audios', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
@@ -169,7 +184,7 @@ async function main() {
 
     let index = songs.indexOf(currentSong.src);
     if ((index + 1) < songs.length) {
-      playMusic(songs[index + 1].replace('https://github.com/asimsaeed353/spotify-clone/tree/main/audios', '').replace('.mp3', ''));
+      playMusic(songs[index + 1].replace('/audios', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
