@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -34,16 +36,17 @@
         <div class="left bgcolor-600 flex">
           <div class="library flex align-center">
             <div
-              class="library__heading gray-300 flex align-center fw-600 pointer">
+              class="library__heading gray-300 flex align-center fw-600 pointer"
+            >
               <i class="ri-book-shelf-fill"></i>
               Your Library
-          </div>
+            </div>
             <i class="ri-add-line gray-300 plus-icon pointer"></i>
             <i class="ri-close-line gray-300 close-icon pointer"></i>
           </div>
           <div class="songs-list bgcolor-300">
             <ul>
-                <!-- Dynamic Content Addition -->
+              <!-- Dynamic Content Addition -->
               <!-- <li>
                     <div class="songs-list__left flex">
                   <i class="ri-music-fill"></i>
@@ -54,7 +57,6 @@
                 </div>
                 <i class="ri-play-circle-line"></i>
               </li> -->
-
             </ul>
           </div>
           <!-- <div class="playlist bgcolor-300 flex">
@@ -100,8 +102,6 @@
               <img src="play-icon.svg" alt="play-icon" class="play-icon" />
             </div>
 
-
-
             <div class="song pointer">
               <img
                 class="song-img"
@@ -141,16 +141,8 @@
               <h5 class="song-name">Jo Tum Mere Ho</h5>
               <p class="artist-name gray-300">Anuv Jain</p>
               <img src="play-icon.svg" alt="play-icon" class="play-icon" />
-            </div><div class="song pointer">
-              <img
-                class="song-img"
-                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
-              <h5 class="song-name">Jo Tum Mere Ho</h5>
-              <p class="artist-name gray-300">Anuv Jain</p>
-              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
-            </div><div class="song pointer">
+            </div>
+            <div class="song pointer">
               <img
                 class="song-img"
                 src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -160,39 +152,45 @@
               <p class="artist-name gray-300">Anuv Jain</p>
               <img src="play-icon.svg" alt="play-icon" class="play-icon" />
             </div>
-
-
-
-
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
           </div>
 
           <div class="song-player flex align-center">
             <div class="seek-bar pointer">
-              <div class="circle">
-              </div>
+              <div class="circle"></div>
             </div>
 
-            <div class="song-player__song-name fw-600">
-              song-name
-            </div>
+            <div class="song-player__song-name fw-600">song-name</div>
 
             <div class="playing-controls flex">
               <i id="previous" class="ri-skip-back-fill pointer"></i>
               <div class="play-pause flex">
-              <i id="play" class="ri-play-fill pointer"></i>
-            </div>
+                <i id="play" class="ri-play-fill pointer"></i>
+              </div>
               <i id="next" class="ri-skip-forward-fill pointer"></i>
             </div>
 
             <div class="timevol flex align-center">
-            <div class="song-duration flex fw-600">
-                00:00 / 00:00
+              <div class="song-duration flex fw-600">00:00 / 00:00</div>
+              <div class="vol flex align-center">
+                <i class="ri-volume-up-fill pointer volume-up"></i>
+                <input
+                  type="range"
+                  name="volume"
+                  id="volume"
+                  class="slider pointer"
+                />
+              </div>
             </div>
-            <div class="vol flex align-center">
-              <i class="ri-volume-up-fill pointer volume-up"></i>
-              <input type="range" name="volume" id="volume" class="slider pointer"> 
-            </div>
-          </div>
           </div>
         </div>
       </main>
