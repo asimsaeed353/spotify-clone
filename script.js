@@ -3,7 +3,7 @@ let currentSong = new Audio();
 let songs;
 
 async function getSongs() {
-  let a = await fetch("/audios/");
+  let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios/");
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -64,7 +64,7 @@ async function main() {
                   <i class="ri-music-fill"></i>
                   <div class="song-info">
                   <p class="song-name">${song
-                    .replace("http://127.0.0.1:3000/audios/", "")
+                    .replace("https://github.com/asimsaeed353/spotify-clone/tree/main/audios/", "")
                     .replace(".mp3", "")
                     .replaceAll("-", " ")}</p>
                   <p class="artist-name">Faiz</p>
@@ -153,7 +153,7 @@ async function main() {
     let index = songs.indexOf(currentSong.src);
 
     if ((index - 1) >= 0) {
-      playMusic(songs[index - 1].replace('http://127.0.0.1:3000/audios/', '').replace('.mp3', ''));
+      playMusic(songs[index - 1].replace('https://github.com/asimsaeed353/spotify-clone/tree/main/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
@@ -169,7 +169,7 @@ async function main() {
 
     let index = songs.indexOf(currentSong.src);
     if ((index + 1) < songs.length) {
-      playMusic(songs[index + 1].replace('http://127.0.0.1:3000/audios/', '').replace('.mp3', ''));
+      playMusic(songs[index + 1].replace('https://github.com/asimsaeed353/spotify-clone/tree/main/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
