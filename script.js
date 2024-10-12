@@ -14,7 +14,7 @@ const songs = [
   '/audios/hum-jo-tareek-raahon-mein.mp3',
   '/audios/hum-ne-wo-sab.mp3',
   '/audios/hum-par-tumhari-chah-ka.mp3',
-  '/audios/tum-aye-ho-na-shab-e-intazar.mp3'
+  '/audios/tum-aye-ho-na-shab-e-intazar.mp3',
 ];
 
 // async function getSongs() {
