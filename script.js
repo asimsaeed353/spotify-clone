@@ -17,9 +17,7 @@ const songs = [
   '/audios/tum-aye-ho-na-shab-e-intazar.mp3',
 ];
 
-var audio = new Audio();
-
-let selectedSong = 0;
+let selectedSong = new Audio();
 
 // async function getSongs() {
 //   let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios");
@@ -41,8 +39,6 @@ let selectedSong = 0;
 function playMusic(track) {
   // currentSong.src = './audios/' + track + '.mp3';
   selectedSong.src = './audios/' + track + '.mp3';
-  audio.play();
-  // selectedSong.src = songs[selectedSong];
   // currentSong.src = track;
   // currentSong.play();
   selectedSong.play();
@@ -173,16 +169,16 @@ async function main() {
   previous.addEventListener('click', () => {
 
     console.log('Previous is clicked.');
-    // let index = songs.indexOf(selectedSong.src);
+    let index = songs.indexOf(selectedSong.src);
     
-    console.log('Previous is clicked so here is the index of song', selectedSong);
+    console.log('Previous is clicked so here is the index of song', selectedSong.src,index);
 
-    if ((selectedSong - 1) >= 0) {
-      playMusic(songs[selectedSong - 1].replace('/audios/', '').replace('.mp3', ''));
+    if ((index - 1) >= 0) {
+      playMusic(songs[index - 1].replace('/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
-    else if ((selectedSong - 1) < 0) {
+    else if ((index - 1) < 0) {
       previous.style.opacity = '0.7';
     }
   })
@@ -192,14 +188,14 @@ async function main() {
 
     console.log('next is clicked.');
 
-    // let index = songs.indexOf(selectedSong.src);
-    console.log('Next is clicked so here is the index of song', selectedSong);
-    if ((selectedSong+ 1) < songs.length) {
-      playMusic(songs[selectedSong + 1].replace('/audios/', '').replace('.mp3', ''));
+    let index = songs.indexOf(selectedSong.src);
+    console.log('Next is clicked so here is the index of song', selectedSong.src,index);
+    if ((index + 1) < songs.length) {
+      playMusic(songs[index + 1].replace('/audios/', '').replace('.mp3', ''));
       previous.style.opacity = '1';
       next.style.opacity = '1';
     }
-    else if ((selectedSong + 1) >= songs.length) {
+    else if ((index + 1) >= songs.length) {
       next.style.opacity = '0.7';
     }
   })
