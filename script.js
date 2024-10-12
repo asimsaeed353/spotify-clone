@@ -17,6 +17,8 @@ const songs = [
   '/audios/tum-aye-ho-na-shab-e-intazar.mp3',
 ];
 
+let selectedSong = new Audio();
+
 // async function getSongs() {
 //   let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios");
 //   let response = await a.text();
@@ -35,9 +37,11 @@ const songs = [
 // }
 
 function playMusic(track) {
-  currentSong.src = './audios/' + track + '.mp3';
+  // currentSong.src = './audios/' + track + '.mp3';
+  selectedSong.src = './audios/' + track + '.mp3';
   // currentSong.src = track;
-  currentSong.play();
+  // currentSong.play();
+  selectedSong.play();
   document.querySelector(".play-pause").innerHTML = `<i id="pause" class="ri-pause-fill pointer"></i>`;
   document.querySelector(".song-player__song-name").innerHTML = decodeURI(
     track.replaceAll("-", " ")
@@ -110,33 +114,33 @@ async function main() {
 
   //Attach an event listener to play
   document.querySelector(".play-pause").addEventListener("click", () => {
-    if (currentSong.paused) {
-      currentSong.play();
+    if (selectedSong.paused) {
+      selectedSong.play();
       document.querySelector(
         ".play-pause"
       ).innerHTML = `<i id="pause" class="ri-pause-fill pointer"></i>`;
     } else {
-      currentSong.pause();
+      selectedSong.pause();
       document.querySelector(".play-pause").innerHTML = `<i id="play" class="ri-play-fill pointer"></i>`;
     }
   });
 
   // Get time in minutes:seconds format mm:ss
-  currentSong.addEventListener("timeupdate", () => {
+  selectedSong.addEventListener("timeupdate", () => {
     console.log(
-      formatTime(currentSong.currentTime),
-      formatTime(currentSong.duration)
+      formatTime(selectedSong.currentTime),
+      formatTime(selectedSong.duration)
     );
     
     // Update Song timing / duration
     document.querySelector(".song-duration").innerHTML = `${formatTime(
-      currentSong.currentTime
-    )}/${formatTime(currentSong.duration)}`;
+      selectedSong.currentTime
+    )}/${formatTime(selectedSong.duration)}`;
 
     // Move seekbar circle
-    document.querySelector('.circle').style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
+    document.querySelector('.circle').style.left = (selectedSong.currentTime / selectedSong.duration) * 100 + "%";
     // Come back to original position when song is finished
-    if (((currentSong.currentTime / currentSong.duration) * 100) > 99) {
+    if (((selectedSong.currentTime / selectedSong.duration) * 100) > 99) {
       document.querySelector('.circle').style.left = 0 + '%';
       document.querySelector(".play-pause").innerHTML = `<i id="play" class="ri-play-fill pointer"></i>`;
     }
@@ -147,7 +151,7 @@ async function main() {
     console.log(e.target.getBoundingClientRect().width, e.offsetX);
     let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
     document.querySelector('.circle').style.left = percent + '%';
-    currentSong.currentTime = (currentSong.duration * percent) / 100;
+    selectedSong.currentTime = (selectedSong.duration * percent) / 100;
   })
 
   // Responsive left show on hamburger touch
@@ -165,7 +169,7 @@ async function main() {
   previous.addEventListener('click', () => {
 
     console.log('Previous is clicked.');
-    let index = songs.indexOf(currentSong.src);
+    let index = songs.indexOf(selectedSong.src);
     console.log('Previous is clicked so here is the index of song', index);
 
     if ((index - 1) >= 0) {
@@ -183,7 +187,7 @@ async function main() {
 
     console.log('next is clicked.');
 
-    let index = songs.indexOf(currentSong.src);
+    let index = songs.indexOf(selectedSong.src);
     console.log('Next is clicked so here is the index of song', index);
     if ((index + 1) < songs.length) {
       playMusic(songs[index + 1].replace('/audios/', '').replace('.mp3', ''));
@@ -198,7 +202,7 @@ async function main() {
   // Add event listener to the range
   document.querySelector('.slider').addEventListener('change', (e) => {
     console.log('setting volume to ', e.target.value);
-    currentSong.volume = parseInt(e.target.value) / 100;
+    selectedSong.volume = parseInt(e.target.value) / 100;
   })
 }
 
