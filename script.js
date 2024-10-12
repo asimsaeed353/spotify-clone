@@ -43,9 +43,9 @@ function playMusic(track) {
   // currentSong.play();
   selectedSong.play();
   document.querySelector(".play-pause").innerHTML = `<i id="pause" class="ri-pause-fill pointer"></i>`;
-  // document.querySelector(".song-player__song-name").innerHTML = decodeURI(
-  //   track.replaceAll("-", " ")
-  // );
+  document.querySelector(".song-player__song-name").innerHTML = decodeURI(
+    track.replaceAll("-", " ")
+  );
   // document.querySelector('.song-duration').innerHTML = '00:00/00:00';
 }
 
