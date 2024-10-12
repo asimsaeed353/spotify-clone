@@ -169,7 +169,7 @@ async function main() {
   previous.addEventListener('click', () => {
 
     console.log('Previous is clicked.');
-    let index = songs.indexOf(selectedSong.src);
+    let index = songs.indexOf(selectedSong.src.replace('https://asimsaeed353.github.io/spotify-clone', ''));
     
     console.log('Previous is clicked so here is the index of song', selectedSong.src,index);
 
@@ -188,7 +188,8 @@ async function main() {
 
     console.log('next is clicked.');
 
-    let index = songs.indexOf(selectedSong.src);
+    // let index = songs.indexOf(selectedSong.src);
+    let index = songs.indexOf(selectedSong.src.replace('https://asimsaeed353.github.io/spotify-clone', ''));
     console.log('Next is clicked so here is the index of song', selectedSong.src,index);
     if ((index + 1) < songs.length) {
       playMusic(songs[index + 1].replace('/audios/', '').replace('.mp3', ''));
