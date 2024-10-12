@@ -1,0 +1,81 @@
+/* Nav Classes */
+
+nav i, .left i{
+    font-size: 2rem;
+}
+
+nav > i:first-child{
+    font-size: 2.5rem;
+}
+
+/* * Nav Hover and Focus Properties * */
+
+.pointer{
+    cursor: pointer;
+}
+
+.home-icon:hover,
+.home-icon:focus,
+.signup-button:hover,
+.signup-button:focus,
+.login-button:hover,
+.login-button:focus,
+.browse:hover,
+.browse:focus,
+.create-playlist:focus,
+.create-playlist:hover,
+.english:hover{
+    scale: 1.1;
+}
+
+.login-button:hover,
+.create-playlist:hover{
+    background: rgb(234, 233, 233);
+}
+
+.signup-button:hover,
+.library__heading:hover,
+.plus-icon:hover{ color: var(--clr-neutral-white);}
+.search:hover{ 
+    background-color: #434343bf;
+    outline: 0.5px solid #8c8b8bbf;
+
+    .search-icon{
+    color:white
+}}
+
+.right__heading h2:hover,
+.right__heading p:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 5%;
+}
+
+.gray-300{
+    color: var(--clr-fonts-300);
+}
+
+.flex{
+    display: flex;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.song:hover{
+    .play-icon{
+        animation-name: play-icon-hover;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+}
+
+/* Font Weights */
+.fw-600{    font-weight: var(--fs-med-bold);}
+.fw-700{    font-weight: var(--fs-bolder);}
+.fw-800{    font-weight: var(--fs-med-bold);}
+
+.bgcolor-600{   background-color: var(--clr-primary-600);}
+.bgcolor-300{   background-color: var(--clr-primary-300);}

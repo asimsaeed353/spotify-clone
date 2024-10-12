@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spotify - Web Player: Music for everyone</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="flex align-center">
+        <i class="ri-spotify-fill pointer"></i>
+        <div class="home-search flex align-center">
+          <i class="ri-home-5-line bgcolor-300 home-icon pointer"></i>
+          <div class="search flex bgcolor-300 pointer">
+            <div class="search__play flex gray-300 align-center">
+              <i class="ri-search-2-line search-icon"></i>
+              <p>What do you want to play?</p>
+            </div>
+            <i class="ri-pages-line gray-300 browse"></i>
+          </div>
+        </div>
+        <div class="nav__buttons flex align-center">
+          <div class="signup-button gray-300 fw-600 pointer">Sign Up</div>
+          <div class="login-button fw-600 pointer">Log in</div>
+        </div>
+      </nav>
+      <main class="flex">
+        <div class="left bgcolor-600 flex">
+          <div class="library flex align-center">
+            <div
+              class="library__heading gray-300 flex align-center fw-600 pointer">
+              <i class="ri-book-shelf-fill"></i>
+              Your Library
+          </div>
+            <i class="ri-add-line gray-300 plus-icon pointer"></i>
+            <i class="ri-close-line gray-300 close-icon pointer"></i>
+          </div>
+          <div class="songs-list bgcolor-300">
+            <ul>
+                <!-- Dynamic Content Addition -->
+              <!-- <li>
+                    <div class="songs-list__left flex">
+                  <i class="ri-music-fill"></i>
+                  <div class="song-info">
+                  <p class="song-name">Dudh Makhna Di mein Pali</p>
+                  <p class="artist-name">Naseebo Lal</p>
+                </div>
+                </div>
+                <i class="ri-play-circle-line"></i>
+              </li> -->
+
+            </ul>
+          </div>
+          <!-- <div class="playlist bgcolor-300 flex">
+            <p class="playlist__new-playlist fw-600">
+              Create your first playlist
+            </p>
+            <p>It's easy, we'll help you</p>
+            <button class="create-playlist fw-600 pointer">
+              Create playlist
+            </button>
+          </div> -->
+          <div class="left__footer">
+            <ul>
+              <li><a href="#" class="gray-300">Legal</a></li>
+              <li><a href="#" class="gray-300">Safety & Privacy Center</a></li>
+              <li><a href="#" class="gray-300">Privacy Policy</a></li>
+              <li><a href="#" class="gray-300">Cookies</a></li>
+              <li><a href="#" class="gray-300">About Ads</a></li>
+              <li><a href="#" class="gray-300">Accessibility</a></li>
+            </ul>
+
+            <button class="english flex align-center fw-600 pointer">
+              <i class="ri-global-line globe-icon"></i>
+              Engilsh
+            </button>
+          </div>
+        </div>
+        <div class="right bgcolor-600 flex">
+          <div class="right__heading flex align-center fw-600">
+            <i class="ri-menu-line hamburger-icon pointer"></i>
+            <h2 class="fw-800 pointer">Spotify Playlists</h2>
+            <p class="pointer">Show all</p>
+          </div>
+          <div class="songs">
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
+
+
+
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
+            <div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div><div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div><div class="song pointer">
+              <img
+                class="song-img"
+                src="https://images.unsplash.com/photo-1553378950-0ba726c8ca1b?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h5 class="song-name">Jo Tum Mere Ho</h5>
+              <p class="artist-name gray-300">Anuv Jain</p>
+              <img src="play-icon.svg" alt="play-icon" class="play-icon" />
+            </div>
+
+
+
+
+          </div>
+
+          <div class="song-player flex align-center">
+            <div class="seek-bar pointer">
+              <div class="circle">
+              </div>
+            </div>
+
+            <div class="song-player__song-name fw-600">
+              song-name
+            </div>
+
+            <div class="playing-controls flex">
+              <i id="previous" class="ri-skip-back-fill pointer"></i>
+              <div class="play-pause flex">
+              <i id="play" class="ri-play-fill pointer"></i>
+            </div>
+              <i id="next" class="ri-skip-forward-fill pointer"></i>
+            </div>
+
+            <div class="timevol flex align-center">
+            <div class="song-duration flex fw-600">
+                00:00 / 00:00
+            </div>
+            <div class="vol flex align-center">
+              <i class="ri-volume-up-fill pointer volume-up"></i>
+              <input type="range" name="volume" id="volume" class="slider pointer"> 
+            </div>
+          </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
