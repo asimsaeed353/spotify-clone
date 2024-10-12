@@ -17,7 +17,9 @@ const songs = [
   '/audios/tum-aye-ho-na-shab-e-intazar.mp3',
 ];
 
-let selectedSong = new Audio();
+var audio = new Audio();
+
+let selectedSong = 0;
 
 // async function getSongs() {
 //   let a = await fetch("https://github.com/asimsaeed353/spotify-clone/tree/main/audios");
@@ -39,6 +41,7 @@ let selectedSong = new Audio();
 function playMusic(track) {
   // currentSong.src = './audios/' + track + '.mp3';
   selectedSong.src = './audios/' + track + '.mp3';
+  audio.play();
   // selectedSong.src = songs[selectedSong];
   // currentSong.src = track;
   // currentSong.play();
