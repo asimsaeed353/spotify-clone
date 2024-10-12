@@ -362,6 +362,7 @@ main{
     justify-content: space-between;
     gap: 3rem;
     overflow: hidden;
+    align-self: flex-end;
 
     position: absolute;
     bottom: 0px;
