@@ -441,6 +441,7 @@ main{
         align-items: center;
         gap: 0.5rem;
         justify-content: center;
+        height: 20%;
     }
 
     .timevol{
