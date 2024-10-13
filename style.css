@@ -488,6 +488,11 @@ main {
       }
     }
 
+    .song-player {
+      /* height: 20%; */
+      min-height: fit-content;
+    }
+
     .english {
       width: 50%;
     }
@@ -496,6 +501,11 @@ main {
   @media (width < 450px) {
     .left {
       width: 65%;
+    }
+
+    .song-player {
+      /* height: 20%; */
+      min-height: fit-content;
     }
   }
 }
