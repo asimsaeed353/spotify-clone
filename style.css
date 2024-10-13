@@ -150,6 +150,8 @@ main {
   border-radius: 0.5rem;
   min-height: 50%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .songs-list ul li {
@@ -159,6 +161,8 @@ main {
   gap: 0.25rem;
   background-color: #1ed760;
   color: black;
+
+  flex: 1;
 
   /* border: 1px solid #1ed760; */
   border-radius: 0.5rem;

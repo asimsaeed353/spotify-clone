@@ -237,4 +237,8 @@ async function main() {
   });
 }
 
+document.addEventListener("load", () => {
+  playMusic(songs[0].replace("/audios/", "").replace(".mp3", ""));
+})
+
 main();
