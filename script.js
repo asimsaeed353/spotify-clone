@@ -51,6 +51,10 @@ function playMusic(track) {
   // document.querySelector('.song-duration').innerHTML = '00:00/00:00';
 }
 
+document.addEventListener("load", () => {
+  playMusic(songs[0].replace("/audios/", "").replace(".mp3", ""));
+})
+
 async function main() {
   // // Get the list of the songs
   // songs = await getSongs();
@@ -236,9 +240,5 @@ async function main() {
     selectedSong.volume = parseInt(e.target.value) / 100;
   });
 }
-
-document.addEventListener("load", () => {
-  playMusic(songs[0].replace("/audios/", "").replace(".mp3", ""));
-})
 
 main();
