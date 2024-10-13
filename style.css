@@ -427,7 +427,7 @@ main {
     align-items: center;
     gap: 0.5rem;
     justify-content: center;
-    height: 25%;
+    min-height: fit-content;
   }
 
   .timevol {
