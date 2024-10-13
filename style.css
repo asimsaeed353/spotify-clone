@@ -446,7 +446,8 @@ main {
     }
 
     .song-player {
-      height: 20%;
+      /* height: 20%; */
+      min-height: fit-content;
     }
   }
 
