@@ -52,7 +52,12 @@ function playMusic(track) {
 }
 
 document.addEventListener("load", () => {
-  playMusic(songs[0].replace("/audios/", "").replace(".mp3", ""));
+  document.querySelector(".song-player__song-name").innerHTML = decodeURI(
+    track.replaceAll("-", " ")
+  ); 
+  document.querySelector("#play").addEventListener('click', () => {
+    playMusic(songs[0].replace("/audios/", "").replace(".mp3", ""));
+  })
 })
 
 async function main() {
