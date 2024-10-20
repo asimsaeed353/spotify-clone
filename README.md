@@ -8,7 +8,12 @@ You can try out the live version of the music player [Live Site](https://asimsae
 
 ## Screenshot
 
-![Project Screenshot](/project-ss.png)
+- ### Desktop
+![Project Screenshot Desktop](/project-ss.png)
+
+- ### Mobile
+![Project Screenshot Mobile](/project-ss-mobile-1.png)
+![Project Screenshot Mobile](/project-ss-mobile-2.png)
 
 ## Features
 
